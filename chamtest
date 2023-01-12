@@ -1,49 +1,85 @@
--- Settings --
+local dwCamera = workspace.CurrentCamera
+local dwRunService = game:GetService("RunService")
+local dwUIS = game:GetService("UserInputService")
+local dwEntities = game:GetService("Players")
+local dwLocalPlayer = dwEntities.LocalPlayer
+local dwMouse = dwLocalPlayer:GetMouse()
 
 local settings = {
-   
-   fillcolor = Color3.fromRGB(0, 0, 0);
-   filltransparency = .75;
-   
-   outlinecolor = Color3.fromRGB(255, 0, 0);
-   outlinetransparency = 0;
-   
+    Aimbot = true,
+    Aiming = false,
+    Aimbot_AimPart = "Head",
+    Aimbot_TeamCheck = false,
+    Aimbot_Draw_FOV = true,
+    Aimbot_FOV_Radius = 50,
+    Aimbot_FOV_Color = Color3.fromRGB(10,10,10)
 }
 
--- Script --
+local fovcircle = Drawing.new("Circle")
+fovcircle.Visible = settings.Aimbot_Draw_FOV
+fovcircle.Radius = settings.Aimbot_FOV_Radius
+fovcircle.Color = settings.Aimbot_FOV_Color
+fovcircle.Thickness = 1
+fovcircle.Filled = false
+fovcircle.Transparency = 1
 
-local plr = game:service'Players'.LocalPlayer
-local highlights = Instance.new('Folder', game:service'CoreGui')
+fovcircle.Position = Vector2.new(dwCamera.ViewportSize.X / 2, dwCamera.ViewportSize.Y / 2)
 
-local function addhighlight(object)
-   local highlight = Instance.new('Highlight', highlights)
-   highlight.Adornee = object
-   
-   highlight.FillColor = settings.fillcolor
-   highlight.FillTransparency = settings.filltransparency
-   
-   highlight.OutlineColor = settings.outlinecolor
-   highlight.OutlineTransparency = settings.outlinetransparency
-   
-   highlight.Adornee.Changed:Connect(function()
-       if not highlight.Adornee or not highlight.Adornee.Parent then
-           highlight:Destroy()    
-       end
-   end)
-   
-   return highlight
-end
+dwUIS.InputBegan:Connect(function(i)
+    if i.UserInputType == Enum.UserInputType.MouseButton2 then
+        settings.Aiming = true
+    end
+end)
 
-local function addtoplayer(object)
-   if object:IsA'Model' and object.Name == 'Player' and object.Parent.Name ~= tostring(plr.TeamColor) then
-       addhighlight(object)
-   end
-end
+dwUIS.InputEnded:Connect(function(i)
+    if i.UserInputType == Enum.UserInputType.MouseButton2 then
+        settings.Aiming = false
+    end
+end)
 
-for i,v in pairs(workspace.Players:GetDescendants()) do
-   addtoplayer(v)
-end
+dwRunService.RenderStepped:Connect(function()
+    
+    local dist = math.huge
+    local closest_char = nil
 
-workspace.Players.DescendantAdded:Connect(function(v)
-   addtoplayer(v)
+    if settings.Aiming then
+
+        for i,v in next, dwEntities:GetChildren() do 
+
+            if v ~= dwLocalPlayer and
+            v.Character and
+            v.Character:FindFirstChild("HumanoidRootPart") and
+            v.Character:FindFirstChild("Humanoid") and
+            v.Character:FindFirstChild("Humanoid").Health > 0 then
+
+                if settings.Aimbot_TeamCheck == true and
+                v.Team ~= dwLocalPlayer.Team or
+                settings.Aimbot_TeamCheck == false then
+
+                    local char = v.Character
+                    local char_part_pos, is_onscreen = dwCamera:WorldToViewportPoint(char[settings.Aimbot_AimPart].Position)
+
+                    if is_onscreen then
+
+                        local mag = (Vector2.new(dwMouse.X, dwMouse.Y) - Vector2.new(char_part_pos.X, char_part_pos.Y)).Magnitude
+
+                        if mag < dist and mag < settings.Aimbot_FOV_Radius then
+
+                            dist = mag
+                            closest_char = char
+
+                        end
+                    end
+                end
+            end
+        end
+
+        if closest_char ~= nil and
+        closest_char:FindFirstChild("HumanoidRootPart") and
+        closest_char:FindFirstChild("Humanoid") and
+        closest_char:FindFirstChild("Humanoid").Health > 0 then
+
+            dwCamera.CFrame = CFrame.new(dwCamera.CFrame.Position, closest_char[settings.Aimbot_AimPart].Position)
+        end
+    end
 end)
