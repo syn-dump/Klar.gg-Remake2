@@ -1,390 +1,49 @@
---[[
+-- Settings --
 
-		Gui2Lua™
-		10zOfficial
-		Version 1.0.0
+local settings = {
+   
+   fillcolor = Color3.fromRGB(0, 0, 0);
+   filltransparency = .75;
+   
+   outlinecolor = Color3.fromRGB(255, 0, 0);
+   outlinetransparency = 0;
+   
+}
 
-]]
+-- Script --
 
+local plr = game:service'Players'.LocalPlayer
+local highlights = Instance.new('Folder', game:service'CoreGui')
 
--- Instances
-
-local rush_point = Instance.new("ScreenGui")
-local frame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local module_list = Instance.new("Frame")
-local aimbot = Instance.new("ImageButton")
-local visual = Instance.new("ImageButton")
-local UICorner_2 = Instance.new("UICorner")
-local misc = Instance.new("ImageButton")
-local paint = Instance.new("ImageButton")
-local settings = Instance.new("ImageButton")
-local credit = Instance.new("TextLabel")
-local credit1 = Instance.new("TextLabel")
-local credit2 = Instance.new("TextLabel")
-local aimbot_frame = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local fade_label = Instance.new("ImageLabel")
-local aimlabel = Instance.new("TextLabel")
-local enableaim = Instance.new("TextButton")
-local aimclick = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local aimclickcheck = Instance.new("Frame")
-local UICorner_5 = Instance.new("UICorner")
-local settings_frame = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
-local fade_label_2 = Instance.new("ImageLabel")
-local aimlabel_2 = Instance.new("TextLabel")
-local visuals_frame = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
-local fade_label_3 = Instance.new("ImageLabel")
-local aimlabel_3 = Instance.new("TextLabel")
-local chamclick = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local enablechams = Instance.new("TextButton")
-local chamclickcheck = Instance.new("Frame")
-local UICorner_9 = Instance.new("UICorner")
-
--- Properties
-
-rush_point.Name = "rush_point"
-rush_point.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-rush_point.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-frame.Name = "frame"
-frame.Parent = rush_point
-frame.BackgroundColor3 = Color3.new(0.0901961, 0.0901961, 0.0901961)
-frame.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-frame.BorderSizePixel = 0
-frame.Position = UDim2.new(0.163556874, 0, 0.186234877, 0)
-frame.Size = UDim2.new(0, 553, 0, 302)
-
-UICorner.Parent = frame
-UICorner.CornerRadius = UDim.new(0, 6)
-
-module_list.Name = "module_list"
-module_list.Parent = frame
-module_list.BackgroundColor3 = Color3.new(0.133333, 0.133333, 0.133333)
-module_list.Position = UDim2.new(0, 0, 0.00331125828, 0)
-module_list.Size = UDim2.new(0, 109, 0, 300)
-
-aimbot.Name = "aimbot"
-aimbot.Parent = module_list
-aimbot.BackgroundColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
-aimbot.BackgroundTransparency = 1
-aimbot.BorderSizePixel = 0
-aimbot.Position = UDim2.new(0.0982346535, 0, 0.293333322, 0)
-aimbot.Size = UDim2.new(0, 36, 0, 36)
-aimbot.Image = "http://www.roblox.com/asset/?id=10490937516"
-
-visual.Name = "visual"
-visual.Parent = module_list
-visual.BackgroundColor3 = Color3.new(1, 1, 1)
-visual.BackgroundTransparency = 1
-visual.BorderSizePixel = 0
-visual.Position = UDim2.new(0.0982346833, 0, 0.139999986, 0)
-visual.Size = UDim2.new(0, 36, 0, 36)
-visual.Image = "http://www.roblox.com/asset/?id=6523858394"
-
-UICorner_2.Parent = module_list
-UICorner_2.CornerRadius = UDim.new(0, 6)
-
-misc.Name = "misc"
-misc.Parent = module_list
-misc.BackgroundColor3 = Color3.new(1, 1, 1)
-misc.BackgroundTransparency = 1
-misc.BorderSizePixel = 0
-misc.Position = UDim2.new(0.0888888836, 0, 0.439999998, 0)
-misc.Size = UDim2.new(0, 36, 0, 36)
-misc.Image = "http://www.roblox.com/asset/?id=11162756258"
-
-paint.Name = "paint"
-paint.Parent = module_list
-paint.BackgroundColor3 = Color3.new(1, 1, 1)
-paint.BackgroundTransparency = 1
-paint.BorderSizePixel = 0
-paint.Position = UDim2.new(0.0963655263, 0, 0.590000033, 0)
-paint.Size = UDim2.new(0, 36, 0, 36)
-paint.Image = "http://www.roblox.com/asset/?id=10910211661"
-paint.ScaleType = Enum.ScaleType.Slice
-paint.TileSize = UDim2.new(0.800000012, 0, 0.800000012, 0)
-
-settings.Name = "settings"
-settings.Parent = module_list
-settings.BackgroundColor3 = Color3.new(1, 1, 1)
-settings.BackgroundTransparency = 1
-settings.BorderSizePixel = 0
-settings.Position = UDim2.new(0.0888888836, 0, 0.73333329, 0)
-settings.Size = UDim2.new(0, 36, 0, 36)
-settings.Image = "http://www.roblox.com/asset/?id=7059346373"
-
-credit.Name = "credit"
-credit.Parent = frame
-credit.BackgroundColor3 = Color3.new(1, 1, 1)
-credit.BackgroundTransparency = 1
-credit.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-credit.BorderSizePixel = 0
-credit.Position = UDim2.new(0.465420544, 0, 0.0866666585, 0)
-credit.Size = UDim2.new(0, 191, 0, 44)
-credit.Font = Enum.Font.SourceSansBold
-credit.Text = "Klar.gg Roblox Remake v0.1 "
-credit.TextColor3 = Color3.new(1, 1, 1)
-credit.TextScaled = true
-credit.TextSize = 19
-credit.TextWrapped = true
-
-credit1.Name = "credit1"
-credit1.Parent = credit
-credit1.BackgroundColor3 = Color3.new(1, 1, 1)
-credit1.BackgroundTransparency = 1
-credit1.BorderSizePixel = 0
-credit1.Position = UDim2.new(-0.043055132, 0, 1.19518721, 0)
-credit1.Size = UDim2.new(0, 206, 0, 45)
-credit1.Font = Enum.Font.SourceSans
-credit1.Text = "This Script was created by syn#9999. "
-credit1.TextColor3 = Color3.new(0.588235, 0.588235, 0.588235)
-credit1.TextScaled = true
-credit1.TextSize = 14
-credit1.TextWrapped = true
-
-credit2.Name = "credit2"
-credit2.Parent = credit
-credit2.BackgroundColor3 = Color3.new(1, 1, 1)
-credit2.BackgroundTransparency = 1
-credit2.Position = UDim2.new(-0.180289507, 0, 2.54278064, 0)
-credit2.Size = UDim2.new(0, 258, 0, 132)
-credit2.Font = Enum.Font.SourceSans
-credit2.Text = "The reason of making this had been inspired by the klar.gg Rainbow Six Siege Cheat! For more info about the Rainbow Six Siege cheat go to there website, Klar.gg!"
-credit2.TextColor3 = Color3.new(0.588235, 0.588235, 0.588235)
-credit2.TextScaled = true
-credit2.TextSize = 14
-credit2.TextWrapped = true
-
-aimbot_frame.Name = "aimbot_frame"
-aimbot_frame.Parent = frame
-aimbot_frame.BackgroundColor3 = Color3.new(0.0901961, 0.0901961, 0.0901961)
-aimbot_frame.BorderSizePixel = 0
-aimbot_frame.Position = UDim2.new(0.22616826, 0, 0, 0)
-aimbot_frame.Size = UDim2.new(0, 427, 0, 300)
-aimbot_frame.Visible = false
-
-UICorner_3.Parent = aimbot_frame
-UICorner_3.CornerRadius = UDim.new(0, 6)
-
-fade_label.Name = "fade_label"
-fade_label.Parent = aimbot_frame
-fade_label.BackgroundColor3 = Color3.new(1, 1, 1)
-fade_label.BackgroundTransparency = 1
-fade_label.BorderSizePixel = 0
-fade_label.Position = UDim2.new(0.0160966218, 0, 0.0199999996, 0)
-fade_label.Size = UDim2.new(0, 193, 0, 20)
-fade_label.Image = "http://www.roblox.com/asset/?id=10099621336"
-fade_label.ImageColor3 = Color3.new(0, 0, 0.588235)
-
-aimlabel.Name = "aimlabel"
-aimlabel.Parent = fade_label
-aimlabel.BackgroundColor3 = Color3.new(1, 1, 1)
-aimlabel.BackgroundTransparency = 1
-aimlabel.BorderSizePixel = 0
-aimlabel.Position = UDim2.new(0.0209275484, 0, 0.0599999875, 0)
-aimlabel.Size = UDim2.new(0, 83, 0, 18)
-aimlabel.Font = Enum.Font.SourceSansSemibold
-aimlabel.Text = " Aimbot"
-aimlabel.TextColor3 = Color3.new(1, 1, 1)
-aimlabel.TextScaled = true
-aimlabel.TextSize = 14
-aimlabel.TextWrapped = true
-aimlabel.TextXAlignment = Enum.TextXAlignment.Left
-
-enableaim.Name = "enableaim"
-enableaim.Parent = aimbot_frame
-enableaim.BackgroundColor3 = Color3.new(1, 1, 1)
-enableaim.BackgroundTransparency = 1
-enableaim.BorderSizePixel = 0
-enableaim.Position = UDim2.new(0.0144927539, 0, 0.100000001, 0)
-enableaim.Size = UDim2.new(0, 105, 0, 14)
-enableaim.Font = Enum.Font.SourceSansSemibold
-enableaim.Text = "  Enable Aimbot"
-enableaim.TextColor3 = Color3.new(1, 1, 1)
-enableaim.TextScaled = true
-enableaim.TextSize = 14
-enableaim.TextWrapped = true
-enableaim.TextXAlignment = Enum.TextXAlignment.Left
-
-aimclick.Name = "aimclick"
-aimclick.Parent = aimbot_frame
-aimclick.BackgroundColor3 = Color3.new(0, 0, 0)
-aimclick.BorderSizePixel = 0
-aimclick.Position = UDim2.new(0.234299526, 0, 0.100000001, 0)
-aimclick.Size = UDim2.new(0, 14, 0, 14)
-aimclick.Font = Enum.Font.SourceSans
-aimclick.Text = ""
-aimclick.TextColor3 = Color3.new(0, 0, 0)
-aimclick.TextSize = 14
-
-UICorner_4.Parent = aimclick
-UICorner_4.CornerRadius = UDim.new(0, 6)
-
-aimclickcheck.Name = "aimclickcheck"
-aimclickcheck.Parent = aimbot_frame
-aimclickcheck.BackgroundColor3 = Color3.new(1, 1, 1)
-aimclickcheck.BorderSizePixel = 0
-aimclickcheck.Position = UDim2.new(0.233653918, 0, 0.099999994, 0)
-aimclickcheck.Size = UDim2.new(0, 14, 0, 14)
-aimclickcheck.Visible = false
-
-UICorner_5.Parent = aimclickcheck
-UICorner_5.CornerRadius = UDim.new(0, 6)
-
-settings_frame.Name = "settings_frame"
-settings_frame.Parent = frame
-settings_frame.BackgroundColor3 = Color3.new(0.0901961, 0.0901961, 0.0901961)
-settings_frame.BorderSizePixel = 0
-settings_frame.Position = UDim2.new(0.229441851, 0, 0.00331125828, 0)
-settings_frame.Size = UDim2.new(0, 426, 0, 301)
-settings_frame.Visible = false
-
-UICorner_6.Parent = settings_frame
-UICorner_6.CornerRadius = UDim.new(0, 6)
-
-fade_label_2.Name = "fade_label"
-fade_label_2.Parent = settings_frame
-fade_label_2.Active = true
-fade_label_2.BackgroundColor3 = Color3.new(1, 1, 1)
-fade_label_2.BackgroundTransparency = 1
-fade_label_2.BorderColor3 = Color3.new(1, 0.0705882, 0.00392157)
-fade_label_2.BorderSizePixel = 0
-fade_label_2.Position = UDim2.new(0.0160966218, 0, 0.0133333337, 0)
-fade_label_2.Size = UDim2.new(0, 193, 0, 20)
-fade_label_2.Image = "http://www.roblox.com/asset/?id=10099621336"
-fade_label_2.ImageColor3 = Color3.new(1, 0.882353, 0)
-
-aimlabel_2.Name = "aimlabel"
-aimlabel_2.Parent = fade_label_2
-aimlabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
-aimlabel_2.BackgroundTransparency = 1
-aimlabel_2.BorderSizePixel = 0
-aimlabel_2.Position = UDim2.new(0.0209275484, 0, 0.0599999875, 0)
-aimlabel_2.Size = UDim2.new(0, 83, 0, 18)
-aimlabel_2.Font = Enum.Font.SourceSansSemibold
-aimlabel_2.Text = " Settings"
-aimlabel_2.TextColor3 = Color3.new(1, 1, 1)
-aimlabel_2.TextScaled = true
-aimlabel_2.TextSize = 14
-aimlabel_2.TextWrapped = true
-aimlabel_2.TextXAlignment = Enum.TextXAlignment.Left
-
-visuals_frame.Name = "visuals_frame"
-visuals_frame.Parent = frame
-visuals_frame.BackgroundColor3 = Color3.new(0.0901961, 0.0901961, 0.0901961)
-visuals_frame.BorderSizePixel = 0
-visuals_frame.Position = UDim2.new(0.22895807, 0, 0.00639639795, 0)
-visuals_frame.Size = UDim2.new(0, 426, 0, 300)
-
-UICorner_7.Parent = visuals_frame
-UICorner_7.CornerRadius = UDim.new(0, 6)
-
-fade_label_3.Name = "fade_label"
-fade_label_3.Parent = visuals_frame
-fade_label_3.Active = true
-fade_label_3.BackgroundColor3 = Color3.new(1, 1, 1)
-fade_label_3.BackgroundTransparency = 1
-fade_label_3.BorderColor3 = Color3.new(1, 0.0705882, 0.00392157)
-fade_label_3.BorderSizePixel = 0
-fade_label_3.ClipsDescendants = true
-fade_label_3.Position = UDim2.new(0.0160966218, 0, 0.0166666657, 0)
-fade_label_3.Size = UDim2.new(0, 193, 0, 20)
-fade_label_3.Image = "http://www.roblox.com/asset/?id=10099621336"
-fade_label_3.ImageColor3 = Color3.new(1, 0.882353, 0)
-
-aimlabel_3.Name = "aimlabel"
-aimlabel_3.Parent = fade_label_3
-aimlabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
-aimlabel_3.BackgroundTransparency = 1
-aimlabel_3.BorderSizePixel = 0
-aimlabel_3.Position = UDim2.new(0.0209275484, 0, 0.0599999875, 0)
-aimlabel_3.Size = UDim2.new(0, 83, 0, 18)
-aimlabel_3.Font = Enum.Font.SourceSansSemibold
-aimlabel_3.Text = " Visuals"
-aimlabel_3.TextColor3 = Color3.new(1, 1, 1)
-aimlabel_3.TextScaled = true
-aimlabel_3.TextSize = 20
-aimlabel_3.TextWrapped = true
-aimlabel_3.TextXAlignment = Enum.TextXAlignment.Left
-
-chamclick.Name = "chamclick"
-chamclick.Parent = visuals_frame
-chamclick.BackgroundColor3 = Color3.new(0, 0, 0)
-chamclick.BorderSizePixel = 0
-chamclick.Position = UDim2.new(0.227257252, 0, 0.099999994, 0)
-chamclick.Size = UDim2.new(0, 14, 0, 14)
-chamclick.Font = Enum.Font.SourceSans
-chamclick.Text = ""
-chamclick.TextColor3 = Color3.new(0, 0, 0)
-chamclick.TextSize = 14
-
-UICorner_8.Parent = chamclick
-UICorner_8.CornerRadius = UDim.new(0, 6)
-
-enablechams.Name = "enablechams"
-enablechams.Parent = visuals_frame
-enablechams.BackgroundColor3 = Color3.new(1, 1, 1)
-enablechams.BackgroundTransparency = 1
-enablechams.BorderSizePixel = 0
-enablechams.Position = UDim2.new(0.0144927539, 0, 0.100000001, 0)
-enablechams.Size = UDim2.new(0, 105, 0, 14)
-enablechams.Font = Enum.Font.SourceSansSemibold
-enablechams.Text = "  Enable Chams"
-enablechams.TextColor3 = Color3.new(1, 1, 1)
-enablechams.TextScaled = true
-enablechams.TextSize = 14
-enablechams.TextWrapped = true
-enablechams.TextXAlignment = Enum.TextXAlignment.Left
-
-chamclickcheck.Name = "chamclickcheck"
-chamclickcheck.Parent = visuals_frame
-chamclickcheck.BackgroundColor3 = Color3.new(1, 1, 1)
-chamclickcheck.BorderSizePixel = 0
-chamclickcheck.Position = UDim2.new(0.233653918, 0, 0.099999994, 0)
-chamclickcheck.Size = UDim2.new(0, 14, 0, 14)
-chamclickcheck.Visible = false
-
-UICorner_9.Parent = chamclickcheck
-UICorner_9.CornerRadius = UDim.new(0, 6)
-
--- Scripts
-
-local function PXSLTK_fake_script() -- visual.LocalScript 
-	local script = Instance.new('LocalScript', visual)
-
-	visual.MouseButton1Click:Connect(function()
-		visuals_frame.Visible = true
-	end)
+local function addhighlight(object)
+   local highlight = Instance.new('Highlight', highlights)
+   highlight.Adornee = object
+   
+   highlight.FillColor = settings.fillcolor
+   highlight.FillTransparency = settings.filltransparency
+   
+   highlight.OutlineColor = settings.outlinecolor
+   highlight.OutlineTransparency = settings.outlinetransparency
+   
+   highlight.Adornee.Changed:Connect(function()
+       if not highlight.Adornee or not highlight.Adornee.Parent then
+           highlight:Destroy()    
+       end
+   end)
+   
+   return highlight
 end
-coroutine.wrap(PXSLTK_fake_script)()
-local function UNIGIE_fake_script() -- settings.LocalScript 
-	local script = Instance.new('LocalScript', settings)
 
-	settings.MouseButton1Click:Connect(function()
-		settings_frame.Visible = true
-	end)
+local function addtoplayer(object)
+   if object:IsA'Model' and object.Name == 'Player' and object.Parent.Name ~= tostring(plr.TeamColor) then
+       addhighlight(object)
+   end
 end
-coroutine.wrap(UNIGIE_fake_script)()
-local function KOBGL_fake_script() -- aimbot_frame.LocalScript 
-	local script = Instance.new('LocalScript', aimbot_frame)
 
-	settings.MouseButton1Click:Connect(function()
-		setting.Visible = true
-	end)
-	
-	
+for i,v in pairs(workspace.Players:GetDescendants()) do
+   addtoplayer(v)
 end
-coroutine.wrap(KOBGL_fake_script)()
-local function PFQBZ_fake_script() -- chamclick.LocalScript 
-	local script = Instance.new('LocalScript', chamclick)
 
-	chamclick.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/syn-dump/Klar.gg-Remake2/main/chamtest"))()
-	end)
-end
-coroutine.wrap(PFQBZ_fake_script)()
+workspace.Players.DescendantAdded:Connect(function(v)
+   addtoplayer(v)
+end)
