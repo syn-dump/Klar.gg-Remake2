@@ -1,960 +1,395 @@
---[[
-
-		Gui2Lua™
-		10zOfficial
-		Version 1.0.0
-
-]]
-
-
--- Instances
-
-local ScriptHub = Instance.new("ScreenGui")
-local frame1 = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local sidebar = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local sidebar_extension = Instance.new("Frame")
-local sidebar_extension_2 = Instance.new("Frame")
-local loader_icon = Instance.new("ImageLabel")
+local FH378GF08HOSDJHGFY734GASHFD8YOG723F0DG278623F67DF2OLGASYGD79623F67D237O82DS67IDFR780932TD0723FG78FS6 = Instance.new("ScreenGui")
+local gui = Instance.new("Frame")
+local server_status_label = Instance.new("TextLabel")
+local blue_bar_extend = Instance.new("Frame")
+local corner_frame = Instance.new("Frame")
+local gray_lining = Instance.new("Frame")
+local frame_fix = Instance.new("Frame")
+local status = Instance.new("Frame")
+local status_corner_fix = Instance.new("Frame")
+local status_1 = Instance.new("TextLabel")
 local TextLabel = Instance.new("TextLabel")
-local frame1_extend = Instance.new("Frame")
-local Frame = Instance.new("Frame")
-local visuals_button = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local aimbot_buttom = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local settings_button = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local misc_button = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
-local killgui_button = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
-local info_frame = Instance.new("Frame")
-local UICorner_8 = Instance.new("UICorner")
-local ImageLabel = Instance.new("ImageLabel")
+local status_3 = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
-local welcome_text = Instance.new("TextLabel")
-local version_text = Instance.new("TextLabel")
-local misc_frame = Instance.new("Frame")
-local UICorner_9 = Instance.new("UICorner")
-local ImageLabel_2 = Instance.new("ImageLabel")
-local tab_name = Instance.new("TextLabel")
-local text4 = Instance.new("TextLabel")
-local text3 = Instance.new("TextLabel")
-local text2 = Instance.new("TextLabel")
-local text1 = Instance.new("TextLabel")
-local chatspoof = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
-local superjump = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
-local superspeed = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
-local chatspammer_off = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
-local settings_frame = Instance.new("Frame")
-local UICorner_14 = Instance.new("UICorner")
-local ImageLabel_3 = Instance.new("ImageLabel")
-local tab_name_2 = Instance.new("TextLabel")
-local text4_2 = Instance.new("TextLabel")
-local text3_2 = Instance.new("TextLabel")
-local text2_2 = Instance.new("TextLabel")
-local text1_2 = Instance.new("TextLabel")
-local chatspoof_2 = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local superjump_2 = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
-local superspeed_2 = Instance.new("TextButton")
-local UICorner_17 = Instance.new("UICorner")
-local chatspammer_off_2 = Instance.new("TextButton")
-local UICorner_18 = Instance.new("UICorner")
-local aimbot_frame = Instance.new("Frame")
-local UICorner_19 = Instance.new("UICorner")
-local ImageLabel_4 = Instance.new("ImageLabel")
-local tab_name_3 = Instance.new("TextLabel")
-local text4_3 = Instance.new("TextLabel")
-local text3_3 = Instance.new("TextLabel")
-local text2_3 = Instance.new("TextLabel")
-local text1_3 = Instance.new("TextLabel")
-local chatspoof_3 = Instance.new("TextButton")
-local UICorner_20 = Instance.new("UICorner")
-local superjump_3 = Instance.new("TextButton")
-local UICorner_21 = Instance.new("UICorner")
-local superspeed_3 = Instance.new("TextButton")
-local UICorner_22 = Instance.new("UICorner")
-local chatspammer_off_3 = Instance.new("TextButton")
-local UICorner_23 = Instance.new("UICorner")
-local visuals_frame = Instance.new("Frame")
-local UICorner_24 = Instance.new("UICorner")
-local ImageLabel_5 = Instance.new("ImageLabel")
-local tab_name_4 = Instance.new("TextLabel")
-local text4_4 = Instance.new("TextLabel")
-local text3_4 = Instance.new("TextLabel")
-local text2_4 = Instance.new("TextLabel")
-local text1_4 = Instance.new("TextLabel")
-local chams_button = Instance.new("TextButton")
-local UICorner_25 = Instance.new("UICorner")
-local outlines_button = Instance.new("TextButton")
-local UICorner_26 = Instance.new("UICorner")
-local skeletons_button = Instance.new("TextButton")
-local UICorner_27 = Instance.new("UICorner")
-local tracers_button = Instance.new("TextButton")
-local UICorner_28 = Instance.new("UICorner")
+local status_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local news_frame = Instance.new("TextLabel")
+local blue_bar_extend_2 = Instance.new("Frame")
+local corner_frame_2 = Instance.new("Frame")
+local gray_lining_2 = Instance.new("Frame")
+local frame_fix_2 = Instance.new("Frame")
+local news_dropdown = Instance.new("Frame")
+local status_corner_fix_2 = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local _2nd_line = Instance.new("TextLabel")
+local first_line = Instance.new("TextLabel")
+local _3rd_line = Instance.new("TextLabel")
+local _2nd_line_2 = Instance.new("TextLabel")
+local laucher_frame = Instance.new("TextLabel")
+local blue_bar_extend_3 = Instance.new("Frame")
+local corner_frame_3 = Instance.new("Frame")
+local gray_lining_3 = Instance.new("Frame")
+local frame_fix_3 = Instance.new("Frame")
+local frame_other = Instance.new("Frame")
+local status_corner_fix_3 = Instance.new("Frame")
+local BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg = Instance.new("TextButton")
+local pass = Instance.new("TextBox")
+ 
+FH378GF08HOSDJHGFY734GASHFD8YOG723F0DG278623F67DF2OLGASYGD79623F67D237O82DS67IDFR780932TD0723FG78FS6.Name = "FH378GF08HOSDJHGFY734GASHFD8YOG723F0DG278623F67DF2OLGASYGD79623F67D237O82DS67IDFR780932TD0723FG78FS6"
+FH378GF08HOSDJHGFY734GASHFD8YOG723F0DG278623F67DF2OLGASYGD79623F67D237O82DS67IDFR780932TD0723FG78FS6.Parent = game.CoreGui
+FH378GF08HOSDJHGFY734GASHFD8YOG723F0DG278623F67DF2OLGASYGD79623F67D237O82DS67IDFR780932TD0723FG78FS6.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
--- Properties
+gui.Name = "gui"
+gui.Parent = FH378GF08HOSDJHGFY734GASHFD8YOG723F0DG278623F67DF2OLGASYGD79623F67D237O82DS67IDFR780932TD0723FG78FS6
+gui.BackgroundColor3 = Color3.new(0.160784, 0.207843, 0.266667)
+gui.BorderSizePixel = 0
+gui.Position = UDim2.new(0.596731365, 0, 0.223192006, 0)
+gui.Size = UDim2.new(0, 394, 0, 444)
 
-ScriptHub.Name = "ScriptHub"
-ScriptHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+server_status_label.Name = "server_status_label"
+server_status_label.Parent = gui
+server_status_label.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+server_status_label.BorderSizePixel = 0
+server_status_label.Position = UDim2.new(0.044745896, 0, 0.0403429642, 0)
+server_status_label.Size = UDim2.new(0, 358, 0, 39)
+server_status_label.Font = Enum.Font.SourceSans
+server_status_label.Text = "     Server Status"
+server_status_label.TextColor3 = Color3.new(0.827451, 0.847059, 0.886275)
+server_status_label.TextSize = 16
+server_status_label.TextWrapped = true
+server_status_label.TextXAlignment = Enum.TextXAlignment.Left
 
-frame1.Name = "frame1"
-frame1.Parent = ScriptHub
-frame1.BackgroundColor3 = Color3.new(0.0862745, 0.0901961, 0.105882)
-frame1.Position = UDim2.new(0.152159736, 0, 0.292647302, 0)
-frame1.Size = UDim2.new(0, 621, 0, 376)
+blue_bar_extend.Name = "blue_bar_extend"
+blue_bar_extend.Parent = server_status_label
+blue_bar_extend.BackgroundColor3 = Color3.new(0.0705882, 0.384314, 0.623529)
+blue_bar_extend.BorderSizePixel = 0
+blue_bar_extend.Size = UDim2.new(0, 2, 0, 38)
 
-UICorner.Parent = frame1
-UICorner.CornerRadius = UDim.new(0.00999999978, 8)
+corner_frame.Name = "corner_frame"
+corner_frame.Parent = server_status_label
+corner_frame.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+corner_frame.Position = UDim2.new(0.932555139, 0, 0, 0)
+corner_frame.Size = UDim2.new(0, 31, 0, 39)
 
-sidebar.Name = "sidebar"
-sidebar.Parent = frame1
-sidebar.BackgroundColor3 = Color3.new(0.12549, 0.129412, 0.145098)
-sidebar.BorderSizePixel = 0
-sidebar.Size = UDim2.new(0, 125, 0, 376)
+gray_lining.Name = "gray_lining"
+gray_lining.Parent = server_status_label
+gray_lining.BackgroundColor3 = Color3.new(0.211765, 0.247059, 0.294118)
+gray_lining.BorderSizePixel = 0
+gray_lining.Position = UDim2.new(0, 0, 0.974358976, 0)
+gray_lining.Size = UDim2.new(0, 364, 0, 1)
 
-UICorner_2.Parent = sidebar
-UICorner_2.CornerRadius = UDim.new(0.00999999978, 8)
+frame_fix.Name = "frame_fix"
+frame_fix.Parent = server_status_label
+frame_fix.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+frame_fix.BorderSizePixel = 0
+frame_fix.Position = UDim2.new(0.829608917, 0, 0.589743614, 0)
+frame_fix.Size = UDim2.new(0, 67, 0, 15)
 
-sidebar_extension.Name = "sidebar_extension"
-sidebar_extension.Parent = sidebar
-sidebar_extension.BackgroundColor3 = Color3.new(0.12549, 0.129412, 0.145098)
-sidebar_extension.BorderSizePixel = 0
-sidebar_extension.Position = UDim2.new(0.888000011, 0, 0, 0)
-sidebar_extension.Size = UDim2.new(0, 14, 0, 376)
+status.Name = "status"
+status.Parent = server_status_label
+status.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+status.BorderSizePixel = 0
+status.Position = UDim2.new(0, 0, 1, 0)
+status.Size = UDim2.new(0, 364, 0, 60)
 
-sidebar_extension_2.Name = "sidebar_extension"
-sidebar_extension_2.Parent = sidebar_extension
-sidebar_extension_2.BackgroundColor3 = Color3.new(0.12549, 0.129412, 0.145098)
-sidebar_extension_2.BorderSizePixel = 0
-sidebar_extension_2.Position = UDim2.new(-7.92857122, 0, 0, 0)
-sidebar_extension_2.Size = UDim2.new(0, 20, 0, 9)
+status_corner_fix.Name = "status_corner_fix"
+status_corner_fix.Parent = status
+status_corner_fix.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+status_corner_fix.Position = UDim2.new(0, 0, 0.899999976, 0)
+status_corner_fix.Size = UDim2.new(0, 364, 0, 14)
 
-loader_icon.Name = "loader_icon"
-loader_icon.Parent = frame1
-loader_icon.BackgroundColor3 = Color3.new(1, 1, 1)
-loader_icon.BackgroundTransparency = 1
-loader_icon.BorderSizePixel = 0
-loader_icon.Position = UDim2.new(-0.00149398751, 0, 0.00144487736, 0)
-loader_icon.Size = UDim2.new(0, 34, 0, 34)
-loader_icon.Image = "http://www.roblox.com/asset/?id=7059346373"
-loader_icon.ImageColor3 = Color3.new(0.243137, 0.52549, 0.768628)
+status_1.Name = "status_1"
+status_1.Parent = status
+status_1.BackgroundColor3 = Color3.new(0.133333, 0.180392, 0.235294)
+status_1.BackgroundTransparency = 1
+status_1.BorderSizePixel = 0
+status_1.Position = UDim2.new(0.0879120901, 0, 0.183333337, 0)
+status_1.Size = UDim2.new(0, 92, 0, 21)
+status_1.Font = Enum.Font.SourceSans
+status_1.Text = "Discord Server"
+status_1.TextColor3 = Color3.new(0.345098, 0.4, 0.466667)
+status_1.TextSize = 14
 
-TextLabel.Parent = loader_icon
+TextLabel.Parent = status_1
 TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel.BackgroundTransparency = 1
-TextLabel.Position = UDim2.new(0.99999994, 0, 0.0276969466, 0)
-TextLabel.Size = UDim2.new(0, 77, 0, 33)
-TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "SYNTAX"
-TextLabel.TextColor3 = Color3.new(0.243137, 0.52549, 0.768628)
-TextLabel.TextSize = 19
+TextLabel.Position = UDim2.new(0, 0, 1, 0)
+TextLabel.Size = UDim2.new(0, 92, 0, 16)
+TextLabel.Font = Enum.Font.SourceSansSemibold
+TextLabel.Text = "Online"
+TextLabel.TextColor3 = Color3.new(0.160784, 0.556863, 0.541176)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
 TextLabel.TextWrapped = true
-TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-frame1_extend.Name = "frame1_extend"
-frame1_extend.Parent = frame1
-frame1_extend.BackgroundColor3 = Color3.new(0.0862745, 0.0901961, 0.105882)
-frame1_extend.BorderSizePixel = 0
-frame1_extend.Position = UDim2.new(0.984019399, 0, 0.000964834355, 0)
-frame1_extend.Size = UDim2.new(0, 10, 0, 9)
+status_3.Name = "status_3"
+status_3.Parent = status
+status_3.BackgroundColor3 = Color3.new(0.133333, 0.180392, 0.235294)
+status_3.BackgroundTransparency = 1
+status_3.BorderSizePixel = 0
+status_3.Position = UDim2.new(0.65934068, 0, 0.183333337, 0)
+status_3.Size = UDim2.new(0, 92, 0, 21)
+status_3.Font = Enum.Font.SourceSans
+status_3.Text = "Spinware API"
+status_3.TextColor3 = Color3.new(0.345098, 0.4, 0.466667)
+status_3.TextSize = 14
 
-Frame.Parent = frame1
-Frame.BackgroundColor3 = Color3.new(0.00392157, 0.301961, 0.545098)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(-0.00137464702, 0, -0.00136975944, 0)
-Frame.Size = UDim2.new(0, 622, 0, 2)
-
-visuals_button.Name = "visuals_button"
-visuals_button.Parent = frame1
-visuals_button.BackgroundColor3 = Color3.new(0.243137, 0.52549, 0.768628)
-visuals_button.Position = UDim2.new(0.0176848806, 0, 0.140957445, 0)
-visuals_button.Size = UDim2.new(0, 103, 0, 20)
-visuals_button.Font = Enum.Font.SourceSansBold
-visuals_button.Text = "  Visuals"
-visuals_button.TextColor3 = Color3.new(1, 1, 1)
-visuals_button.TextSize = 14
-visuals_button.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_3.Parent = visuals_button
-
-aimbot_buttom.Name = "aimbot_buttom"
-aimbot_buttom.Parent = frame1
-aimbot_buttom.BackgroundColor3 = Color3.new(0.243137, 0.52549, 0.768628)
-aimbot_buttom.Position = UDim2.new(0.0176848769, 0, 0.215425521, 0)
-aimbot_buttom.Size = UDim2.new(0, 103, 0, 20)
-aimbot_buttom.Font = Enum.Font.SourceSansBold
-aimbot_buttom.Text = "  Aimbot"
-aimbot_buttom.TextColor3 = Color3.new(1, 1, 1)
-aimbot_buttom.TextSize = 14
-aimbot_buttom.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_4.Parent = aimbot_buttom
-
-settings_button.Name = "settings_button"
-settings_button.Parent = frame1
-settings_button.BackgroundColor3 = Color3.new(0.243137, 0.52549, 0.768628)
-settings_button.Position = UDim2.new(0.0176848881, 0, 0.367021292, 0)
-settings_button.Size = UDim2.new(0, 103, 0, 20)
-settings_button.Font = Enum.Font.SourceSansBold
-settings_button.Text = "  Settings"
-settings_button.TextColor3 = Color3.new(1, 1, 1)
-settings_button.TextSize = 14
-settings_button.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_5.Parent = settings_button
-
-misc_button.Name = "misc_button"
-misc_button.Parent = frame1
-misc_button.BackgroundColor3 = Color3.new(0.243137, 0.52549, 0.768628)
-misc_button.Position = UDim2.new(0.0176848918, 0, 0.289893627, 0)
-misc_button.Size = UDim2.new(0, 103, 0, 20)
-misc_button.Font = Enum.Font.SourceSansBold
-misc_button.Text = "  Misc"
-misc_button.TextColor3 = Color3.new(1, 1, 1)
-misc_button.TextSize = 14
-misc_button.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_6.Parent = misc_button
-
-killgui_button.Name = "killgui_button"
-killgui_button.Parent = frame1
-killgui_button.BackgroundColor3 = Color3.new(0.243137, 0.52549, 0.768628)
-killgui_button.Position = UDim2.new(0.0176848881, 0, 0.920212746, 0)
-killgui_button.Size = UDim2.new(0, 103, 0, 20)
-killgui_button.Font = Enum.Font.SourceSansBold
-killgui_button.Text = "  Exit GUI"
-killgui_button.TextColor3 = Color3.new(1, 1, 1)
-killgui_button.TextSize = 14
-killgui_button.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_7.Parent = killgui_button
-
-info_frame.Name = "info_frame"
-info_frame.Parent = frame1
-info_frame.BackgroundColor3 = Color3.new(0.0862745, 0.0901961, 0.105882)
-info_frame.Position = UDim2.new(0.199677929, 0, 0.00394942891, 0)
-info_frame.Size = UDim2.new(0, 495, 0, 374)
-
-UICorner_8.Parent = info_frame
-UICorner_8.CornerRadius = UDim.new(0.00999999978, 8)
-
-ImageLabel.Parent = info_frame
-ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel.BackgroundTransparency = 1
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.0160965789, 0, 0.0213333331, 0)
-ImageLabel.Size = UDim2.new(0, 167, 0, 17)
-ImageLabel.Image = "http://www.roblox.com/asset/?id=10099621336"
-
-TextLabel_2.Parent = ImageLabel
+TextLabel_2.Parent = status_3
 TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel_2.BackgroundTransparency = 1
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Size = UDim2.new(0, 156, 0, 17)
+TextLabel_2.Position = UDim2.new(0, 0, 1, 0)
+TextLabel_2.Size = UDim2.new(0, 92, 0, 16)
 TextLabel_2.Font = Enum.Font.SourceSansSemibold
-TextLabel_2.Text = " Info"
-TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.Text = "Online"
+TextLabel_2.TextColor3 = Color3.new(0.160784, 0.556863, 0.541176)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14
 TextLabel_2.TextWrapped = true
-TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
 
-welcome_text.Name = "welcome_text"
-welcome_text.Parent = info_frame
-welcome_text.BackgroundColor3 = Color3.new(1, 1, 1)
-welcome_text.BackgroundTransparency = 1
-welcome_text.BorderSizePixel = 0
-welcome_text.Position = UDim2.new(0.177840322, 0, 0.153557658, 0)
-welcome_text.Size = UDim2.new(0, 318, 0, 121)
-welcome_text.Font = Enum.Font.SourceSans
-welcome_text.Text = "Welcome To SyntaxSH! If theres any bugs u notice please dm me on discord. Founder: syn#9999"
-welcome_text.TextColor3 = Color3.new(1, 1, 1)
-welcome_text.TextScaled = true
-welcome_text.TextSize = 14
-welcome_text.TextWrapped = true
-
-version_text.Name = "version_text"
-version_text.Parent = info_frame
-version_text.BackgroundColor3 = Color3.new(1, 1, 1)
-version_text.BackgroundTransparency = 1
-version_text.BorderSizePixel = 0
-version_text.Position = UDim2.new(0.799578846, 0, 0.921163142, 0)
-version_text.Size = UDim2.new(0, 89, 0, 28)
-version_text.Font = Enum.Font.SourceSans
-version_text.Text = "Version: BetaV.02"
-version_text.TextColor3 = Color3.new(1, 1, 1)
-version_text.TextScaled = true
-version_text.TextSize = 14
-version_text.TextWrapped = true
-
-misc_frame.Name = "misc_frame"
-misc_frame.Parent = frame1
-misc_frame.BackgroundColor3 = Color3.new(0.0862745, 0.0901961, 0.105882)
-misc_frame.Position = UDim2.new(0.199400187, 0, 0.00394942891, 0)
-misc_frame.Size = UDim2.new(0, 497, 0, 374)
-misc_frame.Visible = false
-
-UICorner_9.Parent = misc_frame
-UICorner_9.CornerRadius = UDim.new(0.00999999978, 8)
-
-ImageLabel_2.Parent = misc_frame
-ImageLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel_2.BackgroundTransparency = 1
-ImageLabel_2.BorderSizePixel = 0
-ImageLabel_2.Position = UDim2.new(0.0160965789, 0, 0.0213333331, 0)
-ImageLabel_2.Size = UDim2.new(0, 167, 0, 17)
-ImageLabel_2.Image = "http://www.roblox.com/asset/?id=10099621336"
-
-tab_name.Name = "tab_name"
-tab_name.Parent = ImageLabel_2
-tab_name.BackgroundColor3 = Color3.new(1, 1, 1)
-tab_name.BackgroundTransparency = 1
-tab_name.BorderSizePixel = 0
-tab_name.Size = UDim2.new(0, 156, 0, 17)
-tab_name.Font = Enum.Font.SourceSansSemibold
-tab_name.Text = " Misc"
-tab_name.TextColor3 = Color3.new(1, 1, 1)
-tab_name.TextScaled = true
-tab_name.TextSize = 14
-tab_name.TextWrapped = true
-tab_name.TextXAlignment = Enum.TextXAlignment.Left
-
-text4.Name = "text4"
-text4.Parent = ImageLabel_2
-text4.BackgroundColor3 = Color3.new(1, 1, 1)
-text4.BackgroundTransparency = 1
-text4.BorderSizePixel = 0
-text4.Position = UDim2.new(-0.00186748803, 0, 5.60941076, 0)
-text4.Size = UDim2.new(0, 114, 0, 16)
-text4.Font = Enum.Font.SourceSansSemibold
-text4.Text = " ?"
-text4.TextColor3 = Color3.new(1, 1, 1)
-text4.TextScaled = true
-text4.TextSize = 14
-text4.TextWrapped = true
-text4.TextXAlignment = Enum.TextXAlignment.Left
-
-text3.Name = "text3"
-text3.Parent = ImageLabel_2
-text3.BackgroundColor3 = Color3.new(1, 1, 1)
-text3.BackgroundTransparency = 1
-text3.BorderSizePixel = 0
-text3.Position = UDim2.new(-0.00186749361, 0, 4.19764709, 0)
-text3.Size = UDim2.new(0, 114, 0, 16)
-text3.Font = Enum.Font.SourceSansSemibold
-text3.Text = " ?"
-text3.TextColor3 = Color3.new(1, 1, 1)
-text3.TextScaled = true
-text3.TextSize = 14
-text3.TextWrapped = true
-text3.TextXAlignment = Enum.TextXAlignment.Left
-
-text2.Name = "text2"
-text2.Parent = ImageLabel_2
-text2.BackgroundColor3 = Color3.new(1, 1, 1)
-text2.BackgroundTransparency = 1
-text2.BorderSizePixel = 0
-text2.Position = UDim2.new(-0.00186749548, 0, 2.84470558, 0)
-text2.Size = UDim2.new(0, 114, 0, 16)
-text2.Font = Enum.Font.SourceSansSemibold
-text2.Text = "Bhop (NotAllGames)"
-text2.TextColor3 = Color3.new(1, 1, 1)
-text2.TextScaled = true
-text2.TextSize = 14
-text2.TextWrapped = true
-text2.TextXAlignment = Enum.TextXAlignment.Left
-
-text1.Name = "text1"
-text1.Parent = ImageLabel_2
-text1.BackgroundColor3 = Color3.new(1, 1, 1)
-text1.BackgroundTransparency = 1
-text1.BorderSizePixel = 0
-text1.Position = UDim2.new(-0.00186749361, 0, 1.4997648, 0)
-text1.Size = UDim2.new(0, 114, 0, 16)
-text1.Font = Enum.Font.SourceSansSemibold
-text1.Text = "Spinbot"
-text1.TextColor3 = Color3.new(1, 1, 1)
-text1.TextScaled = true
-text1.TextSize = 14
-text1.TextWrapped = true
-text1.TextXAlignment = Enum.TextXAlignment.Left
-
-chatspoof.Name = "chatspoof"
-chatspoof.Parent = misc_frame
-chatspoof.BackgroundColor3 = Color3.new(1, 1, 1)
-chatspoof.BorderSizePixel = 0
-chatspoof.Position = UDim2.new(0.244845286, 0, 0.0879999995, 0)
-chatspoof.Size = UDim2.new(0, 16, 0, 16)
-chatspoof.Font = Enum.Font.SourceSans
-chatspoof.Text = ""
-chatspoof.TextColor3 = Color3.new(0, 0, 0)
-chatspoof.TextSize = 14
-
-UICorner_10.Parent = chatspoof
-
-superjump.Name = "superjump"
-superjump.Parent = misc_frame
-superjump.BackgroundColor3 = Color3.new(1, 1, 1)
-superjump.BorderSizePixel = 0
-superjump.Position = UDim2.new(0.244845286, 0, 0.274666667, 0)
-superjump.Size = UDim2.new(0, 16, 0, 16)
-superjump.Font = Enum.Font.SourceSans
-superjump.Text = ""
-superjump.TextColor3 = Color3.new(0, 0, 0)
-superjump.TextSize = 14
-
-UICorner_11.Parent = superjump
-
-superspeed.Name = "superspeed"
-superspeed.Parent = misc_frame
-superspeed.BackgroundColor3 = Color3.new(1, 1, 1)
-superspeed.BorderSizePixel = 0
-superspeed.Position = UDim2.new(0.244845286, 0, 0.210666656, 0)
-superspeed.Size = UDim2.new(0, 16, 0, 16)
-superspeed.Font = Enum.Font.SourceSans
-superspeed.Text = ""
-superspeed.TextColor3 = Color3.new(0, 0, 0)
-superspeed.TextSize = 14
-
-UICorner_12.Parent = superspeed
-
-chatspammer_off.Name = "chatspammer_off"
-chatspammer_off.Parent = misc_frame
-chatspammer_off.BackgroundColor3 = Color3.new(1, 1, 1)
-chatspammer_off.BorderSizePixel = 0
-chatspammer_off.Position = UDim2.new(0.244845286, 0, 0.149333328, 0)
-chatspammer_off.Size = UDim2.new(0, 16, 0, 16)
-chatspammer_off.Font = Enum.Font.SourceSans
-chatspammer_off.Text = ""
-chatspammer_off.TextColor3 = Color3.new(0, 0, 0)
-chatspammer_off.TextSize = 14
-
-UICorner_13.Parent = chatspammer_off
-
-settings_frame.Name = "settings_frame"
-settings_frame.Parent = frame1
-settings_frame.BackgroundColor3 = Color3.new(0.0862745, 0.0901961, 0.105882)
-settings_frame.Position = UDim2.new(0.199677989, 0, 0.00394942891, 0)
-settings_frame.Size = UDim2.new(0, 496, 0, 374)
-settings_frame.Visible = false
-
-UICorner_14.Parent = settings_frame
-UICorner_14.CornerRadius = UDim.new(0.00999999978, 8)
-
-ImageLabel_3.Parent = settings_frame
-ImageLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel_3.BackgroundTransparency = 1
-ImageLabel_3.BorderSizePixel = 0
-ImageLabel_3.Position = UDim2.new(0.0160965789, 0, 0.0213333331, 0)
-ImageLabel_3.Size = UDim2.new(0, 167, 0, 17)
-ImageLabel_3.Image = "http://www.roblox.com/asset/?id=10099621336"
-
-tab_name_2.Name = "tab_name"
-tab_name_2.Parent = ImageLabel_3
-tab_name_2.BackgroundColor3 = Color3.new(1, 1, 1)
-tab_name_2.BackgroundTransparency = 1
-tab_name_2.BorderSizePixel = 0
-tab_name_2.Size = UDim2.new(0, 156, 0, 17)
-tab_name_2.Font = Enum.Font.SourceSansSemibold
-tab_name_2.Text = " Settings"
-tab_name_2.TextColor3 = Color3.new(1, 1, 1)
-tab_name_2.TextScaled = true
-tab_name_2.TextSize = 14
-tab_name_2.TextWrapped = true
-tab_name_2.TextXAlignment = Enum.TextXAlignment.Left
-
-text4_2.Name = "text4"
-text4_2.Parent = ImageLabel_3
-text4_2.BackgroundColor3 = Color3.new(1, 1, 1)
-text4_2.BackgroundTransparency = 1
-text4_2.BorderSizePixel = 0
-text4_2.Position = UDim2.new(-0.00186748803, 0, 5.60941076, 0)
-text4_2.Size = UDim2.new(0, 114, 0, 16)
-text4_2.Font = Enum.Font.SourceSansSemibold
-text4_2.Text = " Rerun Script"
-text4_2.TextColor3 = Color3.new(1, 1, 1)
-text4_2.TextScaled = true
-text4_2.TextSize = 14
-text4_2.TextWrapped = true
-text4_2.TextXAlignment = Enum.TextXAlignment.Left
-
-text3_2.Name = "text3"
-text3_2.Parent = ImageLabel_3
-text3_2.BackgroundColor3 = Color3.new(1, 1, 1)
-text3_2.BackgroundTransparency = 1
-text3_2.BorderSizePixel = 0
-text3_2.Position = UDim2.new(-0.00186749361, 0, 4.19764709, 0)
-text3_2.Size = UDim2.new(0, 114, 0, 16)
-text3_2.Font = Enum.Font.SourceSansSemibold
-text3_2.Text = " Kick From Game"
-text3_2.TextColor3 = Color3.new(1, 1, 1)
-text3_2.TextScaled = true
-text3_2.TextSize = 14
-text3_2.TextWrapped = true
-text3_2.TextXAlignment = Enum.TextXAlignment.Left
-
-text2_2.Name = "text2"
-text2_2.Parent = ImageLabel_3
-text2_2.BackgroundColor3 = Color3.new(1, 1, 1)
-text2_2.BackgroundTransparency = 1
-text2_2.BorderSizePixel = 0
-text2_2.Position = UDim2.new(-0.00186749548, 0, 2.84470558, 0)
-text2_2.Size = UDim2.new(0, 114, 0, 16)
-text2_2.Font = Enum.Font.SourceSansSemibold
-text2_2.Text = " Reset Charecter"
-text2_2.TextColor3 = Color3.new(1, 1, 1)
-text2_2.TextScaled = true
-text2_2.TextSize = 14
-text2_2.TextWrapped = true
-text2_2.TextXAlignment = Enum.TextXAlignment.Left
-
-text1_2.Name = "text1"
-text1_2.Parent = ImageLabel_3
-text1_2.BackgroundColor3 = Color3.new(1, 1, 1)
-text1_2.BackgroundTransparency = 1
-text1_2.BorderSizePixel = 0
-text1_2.Position = UDim2.new(-0.00186749361, 0, 1.4997648, 0)
-text1_2.Size = UDim2.new(0, 114, 0, 16)
-text1_2.Font = Enum.Font.SourceSansSemibold
-text1_2.Text = " Kill GUI"
-text1_2.TextColor3 = Color3.new(1, 1, 1)
-text1_2.TextScaled = true
-text1_2.TextSize = 14
-text1_2.TextWrapped = true
-text1_2.TextXAlignment = Enum.TextXAlignment.Left
-
-chatspoof_2.Name = "chatspoof"
-chatspoof_2.Parent = settings_frame
-chatspoof_2.BackgroundColor3 = Color3.new(1, 1, 1)
-chatspoof_2.BorderSizePixel = 0
-chatspoof_2.Position = UDim2.new(0.244845286, 0, 0.0879999995, 0)
-chatspoof_2.Size = UDim2.new(0, 16, 0, 16)
-chatspoof_2.Font = Enum.Font.SourceSans
-chatspoof_2.Text = ""
-chatspoof_2.TextColor3 = Color3.new(0, 0, 0)
-chatspoof_2.TextSize = 14
-
-UICorner_15.Parent = chatspoof_2
-
-superjump_2.Name = "superjump"
-superjump_2.Parent = settings_frame
-superjump_2.BackgroundColor3 = Color3.new(1, 1, 1)
-superjump_2.BorderSizePixel = 0
-superjump_2.Position = UDim2.new(0.244845286, 0, 0.274666667, 0)
-superjump_2.Size = UDim2.new(0, 16, 0, 16)
-superjump_2.Font = Enum.Font.SourceSans
-superjump_2.Text = ""
-superjump_2.TextColor3 = Color3.new(0, 0, 0)
-superjump_2.TextSize = 14
-
-UICorner_16.Parent = superjump_2
-
-superspeed_2.Name = "superspeed"
-superspeed_2.Parent = settings_frame
-superspeed_2.BackgroundColor3 = Color3.new(1, 1, 1)
-superspeed_2.BorderSizePixel = 0
-superspeed_2.Position = UDim2.new(0.244845286, 0, 0.210666656, 0)
-superspeed_2.Size = UDim2.new(0, 16, 0, 16)
-superspeed_2.Font = Enum.Font.SourceSans
-superspeed_2.Text = ""
-superspeed_2.TextColor3 = Color3.new(0, 0, 0)
-superspeed_2.TextSize = 14
-
-UICorner_17.Parent = superspeed_2
-
-chatspammer_off_2.Name = "chatspammer_off"
-chatspammer_off_2.Parent = settings_frame
-chatspammer_off_2.BackgroundColor3 = Color3.new(1, 1, 1)
-chatspammer_off_2.BorderSizePixel = 0
-chatspammer_off_2.Position = UDim2.new(0.244845286, 0, 0.149333328, 0)
-chatspammer_off_2.Size = UDim2.new(0, 16, 0, 16)
-chatspammer_off_2.Font = Enum.Font.SourceSans
-chatspammer_off_2.Text = ""
-chatspammer_off_2.TextColor3 = Color3.new(0, 0, 0)
-chatspammer_off_2.TextSize = 14
-
-UICorner_18.Parent = chatspammer_off_2
-
-aimbot_frame.Name = "aimbot_frame"
-aimbot_frame.Parent = frame1
-aimbot_frame.BackgroundColor3 = Color3.new(0.0862745, 0.0901961, 0.105882)
-aimbot_frame.Position = UDim2.new(0.199400187, 0, 0.00394942891, 0)
-aimbot_frame.Size = UDim2.new(0, 497, 0, 374)
-aimbot_frame.Visible = false
-
-UICorner_19.Parent = aimbot_frame
-UICorner_19.CornerRadius = UDim.new(0.00999999978, 8)
-
-ImageLabel_4.Parent = aimbot_frame
-ImageLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel_4.BackgroundTransparency = 1
-ImageLabel_4.BorderSizePixel = 0
-ImageLabel_4.Position = UDim2.new(0.0160965789, 0, 0.0213333331, 0)
-ImageLabel_4.Size = UDim2.new(0, 167, 0, 17)
-ImageLabel_4.Image = "http://www.roblox.com/asset/?id=10099621336"
-
-tab_name_3.Name = "tab_name"
-tab_name_3.Parent = ImageLabel_4
-tab_name_3.BackgroundColor3 = Color3.new(1, 1, 1)
-tab_name_3.BackgroundTransparency = 1
-tab_name_3.BorderSizePixel = 0
-tab_name_3.Size = UDim2.new(0, 156, 0, 17)
-tab_name_3.Font = Enum.Font.SourceSansSemibold
-tab_name_3.Text = " Aimbot"
-tab_name_3.TextColor3 = Color3.new(1, 1, 1)
-tab_name_3.TextScaled = true
-tab_name_3.TextSize = 14
-tab_name_3.TextWrapped = true
-tab_name_3.TextXAlignment = Enum.TextXAlignment.Left
-
-text4_3.Name = "text4"
-text4_3.Parent = ImageLabel_4
-text4_3.BackgroundColor3 = Color3.new(1, 1, 1)
-text4_3.BackgroundTransparency = 1
-text4_3.BorderSizePixel = 0
-text4_3.Position = UDim2.new(-0.00186748803, 0, 5.60941076, 0)
-text4_3.Size = UDim2.new(0, 114, 0, 16)
-text4_3.Font = Enum.Font.SourceSansSemibold
-text4_3.Text = " ?"
-text4_3.TextColor3 = Color3.new(1, 1, 1)
-text4_3.TextScaled = true
-text4_3.TextSize = 14
-text4_3.TextWrapped = true
-text4_3.TextXAlignment = Enum.TextXAlignment.Left
-
-text3_3.Name = "text3"
-text3_3.Parent = ImageLabel_4
-text3_3.BackgroundColor3 = Color3.new(1, 1, 1)
-text3_3.BackgroundTransparency = 1
-text3_3.BorderSizePixel = 0
-text3_3.Position = UDim2.new(-0.00186749361, 0, 4.19764709, 0)
-text3_3.Size = UDim2.new(0, 114, 0, 16)
-text3_3.Font = Enum.Font.SourceSansSemibold
-text3_3.Text = " ?"
-text3_3.TextColor3 = Color3.new(1, 1, 1)
-text3_3.TextScaled = true
-text3_3.TextSize = 14
-text3_3.TextWrapped = true
-text3_3.TextXAlignment = Enum.TextXAlignment.Left
-
-text2_3.Name = "text2"
-text2_3.Parent = ImageLabel_4
-text2_3.BackgroundColor3 = Color3.new(1, 1, 1)
-text2_3.BackgroundTransparency = 1
-text2_3.BorderSizePixel = 0
-text2_3.Position = UDim2.new(-0.00186749548, 0, 2.84470558, 0)
-text2_3.Size = UDim2.new(0, 114, 0, 16)
-text2_3.Font = Enum.Font.SourceSansSemibold
-text2_3.Text = " ?"
-text2_3.TextColor3 = Color3.new(1, 1, 1)
-text2_3.TextScaled = true
-text2_3.TextSize = 14
-text2_3.TextWrapped = true
-text2_3.TextXAlignment = Enum.TextXAlignment.Left
-
-text1_3.Name = "text1"
-text1_3.Parent = ImageLabel_4
-text1_3.BackgroundColor3 = Color3.new(1, 1, 1)
-text1_3.BackgroundTransparency = 1
-text1_3.BorderSizePixel = 0
-text1_3.Position = UDim2.new(-0.00186749361, 0, 1.4997648, 0)
-text1_3.Size = UDim2.new(0, 114, 0, 16)
-text1_3.Font = Enum.Font.SourceSansSemibold
-text1_3.Text = " Aimlock Closet"
-text1_3.TextColor3 = Color3.new(1, 1, 1)
-text1_3.TextScaled = true
-text1_3.TextSize = 14
-text1_3.TextWrapped = true
-text1_3.TextXAlignment = Enum.TextXAlignment.Left
-
-chatspoof_3.Name = "chatspoof"
-chatspoof_3.Parent = aimbot_frame
-chatspoof_3.BackgroundColor3 = Color3.new(1, 1, 1)
-chatspoof_3.BorderSizePixel = 0
-chatspoof_3.Position = UDim2.new(0.244845286, 0, 0.0879999995, 0)
-chatspoof_3.Size = UDim2.new(0, 16, 0, 16)
-chatspoof_3.Font = Enum.Font.SourceSans
-chatspoof_3.Text = ""
-chatspoof_3.TextColor3 = Color3.new(0, 0, 0)
-chatspoof_3.TextSize = 14
-
-UICorner_20.Parent = chatspoof_3
-
-superjump_3.Name = "superjump"
-superjump_3.Parent = aimbot_frame
-superjump_3.BackgroundColor3 = Color3.new(1, 1, 1)
-superjump_3.BorderSizePixel = 0
-superjump_3.Position = UDim2.new(0.244845286, 0, 0.274666667, 0)
-superjump_3.Size = UDim2.new(0, 16, 0, 16)
-superjump_3.Font = Enum.Font.SourceSans
-superjump_3.Text = ""
-superjump_3.TextColor3 = Color3.new(0, 0, 0)
-superjump_3.TextSize = 14
-
-UICorner_21.Parent = superjump_3
-
-superspeed_3.Name = "superspeed"
-superspeed_3.Parent = aimbot_frame
-superspeed_3.BackgroundColor3 = Color3.new(1, 1, 1)
-superspeed_3.BorderSizePixel = 0
-superspeed_3.Position = UDim2.new(0.244845286, 0, 0.210666656, 0)
-superspeed_3.Size = UDim2.new(0, 16, 0, 16)
-superspeed_3.Font = Enum.Font.SourceSans
-superspeed_3.Text = ""
-superspeed_3.TextColor3 = Color3.new(0, 0, 0)
-superspeed_3.TextSize = 14
-
-UICorner_22.Parent = superspeed_3
-
-chatspammer_off_3.Name = "chatspammer_off"
-chatspammer_off_3.Parent = aimbot_frame
-chatspammer_off_3.BackgroundColor3 = Color3.new(1, 1, 1)
-chatspammer_off_3.BorderSizePixel = 0
-chatspammer_off_3.Position = UDim2.new(0.244845286, 0, 0.149333328, 0)
-chatspammer_off_3.Size = UDim2.new(0, 16, 0, 16)
-chatspammer_off_3.Font = Enum.Font.SourceSans
-chatspammer_off_3.Text = ""
-chatspammer_off_3.TextColor3 = Color3.new(0, 0, 0)
-chatspammer_off_3.TextSize = 14
-
-UICorner_23.Parent = chatspammer_off_3
-
-visuals_frame.Name = "visuals_frame"
-visuals_frame.Parent = frame1
-visuals_frame.BackgroundColor3 = Color3.new(0.0862745, 0.0901961, 0.105882)
-visuals_frame.Position = UDim2.new(0.199400187, 0, 0.00394942891, 0)
-visuals_frame.Size = UDim2.new(0, 497, 0, 374)
-visuals_frame.Visible = false
-
-UICorner_24.Parent = visuals_frame
-UICorner_24.CornerRadius = UDim.new(0.00999999978, 8)
-
-ImageLabel_5.Parent = visuals_frame
-ImageLabel_5.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel_5.BackgroundTransparency = 1
-ImageLabel_5.BorderSizePixel = 0
-ImageLabel_5.Position = UDim2.new(0.0160965789, 0, 0.0213333331, 0)
-ImageLabel_5.Size = UDim2.new(0, 167, 0, 17)
-ImageLabel_5.Image = "http://www.roblox.com/asset/?id=10099621336"
-
-tab_name_4.Name = "tab_name"
-tab_name_4.Parent = ImageLabel_5
-tab_name_4.BackgroundColor3 = Color3.new(1, 1, 1)
-tab_name_4.BackgroundTransparency = 1
-tab_name_4.BorderSizePixel = 0
-tab_name_4.Size = UDim2.new(0, 156, 0, 17)
-tab_name_4.Font = Enum.Font.SourceSansSemibold
-tab_name_4.Text = " Visuals"
-tab_name_4.TextColor3 = Color3.new(1, 1, 1)
-tab_name_4.TextScaled = true
-tab_name_4.TextSize = 14
-tab_name_4.TextWrapped = true
-tab_name_4.TextXAlignment = Enum.TextXAlignment.Left
-
-text4_4.Name = "text4"
-text4_4.Parent = ImageLabel_5
-text4_4.BackgroundColor3 = Color3.new(1, 1, 1)
-text4_4.BackgroundTransparency = 1
-text4_4.BorderSizePixel = 0
-text4_4.Position = UDim2.new(-0.00186748803, 0, 5.60941076, 0)
-text4_4.Size = UDim2.new(0, 114, 0, 16)
-text4_4.Font = Enum.Font.SourceSansSemibold
-text4_4.Text = " Outlines"
-text4_4.TextColor3 = Color3.new(1, 1, 1)
-text4_4.TextScaled = true
-text4_4.TextSize = 14
-text4_4.TextWrapped = true
-text4_4.TextXAlignment = Enum.TextXAlignment.Left
-
-text3_4.Name = "text3"
-text3_4.Parent = ImageLabel_5
-text3_4.BackgroundColor3 = Color3.new(1, 1, 1)
-text3_4.BackgroundTransparency = 1
-text3_4.BorderSizePixel = 0
-text3_4.Position = UDim2.new(-0.00186749361, 0, 4.19764709, 0)
-text3_4.Size = UDim2.new(0, 114, 0, 16)
-text3_4.Font = Enum.Font.SourceSansSemibold
-text3_4.Text = " Skeletons"
-text3_4.TextColor3 = Color3.new(1, 1, 1)
-text3_4.TextScaled = true
-text3_4.TextSize = 14
-text3_4.TextWrapped = true
-text3_4.TextXAlignment = Enum.TextXAlignment.Left
-
-text2_4.Name = "text2"
-text2_4.Parent = ImageLabel_5
-text2_4.BackgroundColor3 = Color3.new(1, 1, 1)
-text2_4.BackgroundTransparency = 1
-text2_4.BorderSizePixel = 0
-text2_4.Position = UDim2.new(-0.00186749548, 0, 2.84470558, 0)
-text2_4.Size = UDim2.new(0, 114, 0, 16)
-text2_4.Font = Enum.Font.SourceSansSemibold
-text2_4.Text = " Tracers"
-text2_4.TextColor3 = Color3.new(1, 1, 1)
-text2_4.TextScaled = true
-text2_4.TextSize = 14
-text2_4.TextWrapped = true
-text2_4.TextXAlignment = Enum.TextXAlignment.Left
-
-text1_4.Name = "text1"
-text1_4.Parent = ImageLabel_5
-text1_4.BackgroundColor3 = Color3.new(1, 1, 1)
-text1_4.BackgroundTransparency = 1
-text1_4.BorderSizePixel = 0
-text1_4.Position = UDim2.new(-0.00186749361, 0, 1.4997648, 0)
-text1_4.Size = UDim2.new(0, 114, 0, 16)
-text1_4.Font = Enum.Font.SourceSansSemibold
-text1_4.Text = " Chams"
-text1_4.TextColor3 = Color3.new(1, 1, 1)
-text1_4.TextScaled = true
-text1_4.TextSize = 14
-text1_4.TextWrapped = true
-text1_4.TextXAlignment = Enum.TextXAlignment.Left
-
-chams_button.Name = "chams_button"
-chams_button.Parent = visuals_frame
-chams_button.BackgroundColor3 = Color3.new(1, 1, 1)
-chams_button.BorderSizePixel = 0
-chams_button.Position = UDim2.new(0.244845286, 0, 0.0879999995, 0)
-chams_button.Size = UDim2.new(0, 16, 0, 16)
-chams_button.Font = Enum.Font.SourceSans
-chams_button.Text = ""
-chams_button.TextColor3 = Color3.new(0, 0, 0)
-chams_button.TextSize = 14
-
-UICorner_25.Parent = chams_button
-
-outlines_button.Name = "outlines_button"
-outlines_button.Parent = visuals_frame
-outlines_button.BackgroundColor3 = Color3.new(1, 1, 1)
-outlines_button.BorderSizePixel = 0
-outlines_button.Position = UDim2.new(0.244845286, 0, 0.274666667, 0)
-outlines_button.Size = UDim2.new(0, 16, 0, 16)
-outlines_button.Font = Enum.Font.SourceSans
-outlines_button.Text = ""
-outlines_button.TextColor3 = Color3.new(0, 0, 0)
-outlines_button.TextSize = 14
-
-UICorner_26.Parent = outlines_button
-
-skeletons_button.Name = "skeletons_button"
-skeletons_button.Parent = visuals_frame
-skeletons_button.BackgroundColor3 = Color3.new(1, 1, 1)
-skeletons_button.BorderSizePixel = 0
-skeletons_button.Position = UDim2.new(0.244845286, 0, 0.210666656, 0)
-skeletons_button.Size = UDim2.new(0, 16, 0, 16)
-skeletons_button.Font = Enum.Font.SourceSans
-skeletons_button.Text = ""
-skeletons_button.TextColor3 = Color3.new(0, 0, 0)
-skeletons_button.TextSize = 14
-
-UICorner_27.Parent = skeletons_button
-
-tracers_button.Name = "tracers_button"
-tracers_button.Parent = visuals_frame
-tracers_button.BackgroundColor3 = Color3.new(1, 1, 1)
-tracers_button.BorderSizePixel = 0
-tracers_button.Position = UDim2.new(0.244845286, 0, 0.149333328, 0)
-tracers_button.Size = UDim2.new(0, 16, 0, 16)
-tracers_button.Font = Enum.Font.SourceSans
-tracers_button.Text = ""
-tracers_button.TextColor3 = Color3.new(0, 0, 0)
-tracers_button.TextSize = 14
-
-UICorner_28.Parent = tracers_button
-
--- Scripts
-
-local function AQVHS_fake_script() -- visuals_button.visual_gui 
-	local script = Instance.new('LocalScript', visuals_button)
-
-	visuals_button.MouseButton1Click:Connect(function()
-		visuals_frame.Visible = true
-		settings_frame.Visible = false
-		aimbot_frame.Visible = false
-		misc_frame.Visible = false
-	end)
-end
-coroutine.wrap(AQVHS_fake_script)()
-local function YJQZ_fake_script() -- aimbot_buttom.LocalScript 
-	local script = Instance.new('LocalScript', aimbot_buttom)
-
-	aimbot_button.MouseButton1Click:Connect(function()
-		visuals_frame.Visible = false
-		settings_frame.Visible = false
-		aimbot_frame.Visible = true
-		misc_frame.Visible = false
-	end)
-end
-coroutine.wrap(YJQZ_fake_script)()
-local function VPALL_fake_script() -- settings_button.settings_script 
-	local script = Instance.new('LocalScript', settings_button)
-
-	settings_button.MouseButton1Click:Connect(function()
-		visuals_frame.Visible = false
-		settings_frame.Visible = true
-		aimbot_frame.Visible = false
-		misc_frame.Visible = false
-	end)
-end
-coroutine.wrap(VPALL_fake_script)()
-local function ZGUAF_fake_script() -- misc_button.misc_script 
-	local script = Instance.new('LocalScript', misc_button)
-
-	misc_button.MouseButton1Click:Connect(function()
-		visuals_frame.Visible = false
-		settings_frame.Visible = false
-		aimbot_frame.Visible = false
-		misc_frame.Visible = true
-	end)
-end
-coroutine.wrap(ZGUAF_fake_script)()
-local function MCJS_fake_script() -- killgui_button.killgui_script 
-	local script = Instance.new('LocalScript', killgui_button)
-
-	killgui_button.MouseButton1Click:Connect(function()
-			frame1.Visible = false
-	end)
-end
-coroutine.wrap(MCJS_fake_script)()
-local function IMFPB_fake_script() -- chams_button.cham_script 
-	local script = Instance.new('LocalScript', chams_button)
-
-	chams_button.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/syn-dump/Klar.gg-Remake2/main/Chams_OBFUSCATE.lua"))();
-	end)
-end
-coroutine.wrap(IMFPB_fake_script)()
-local function HWZI_fake_script() -- outlines_button.outlines_script 
-	local script = Instance.new('LocalScript', outlines_button)
-
-	chams_button.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/syn-dump/Klar.gg-Remake2/main/Outlines.lua"))();
-	end)
-end
-coroutine.wrap(HWZI_fake_script)()
-local function YGOFGVK_fake_script() -- skeletons_button.skeletons_script 
-	local script = Instance.new('LocalScript', skeletons_button)
-
-	chams_button.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/syn-dump/Klar.gg-Remake2/main/Skeletons_Done.lua"))();
-	end)
-end
-coroutine.wrap(YGOFGVK_fake_script)()
-local function OKLKMY_fake_script() -- tracers_button.tracers_script 
-	local script = Instance.new('LocalScript', tracers_button)
-
-	tracers_button.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/syn-dump/Klar.gg-Remake2/main/Tracers_Test.lua"))();
-	end)
-end
-coroutine.wrap(OKLKMY_fake_script)()
+status_2.Name = "status_2"
+status_2.Parent = status
+status_2.BackgroundColor3 = Color3.new(0.133333, 0.180392, 0.235294)
+status_2.BackgroundTransparency = 1
+status_2.BorderSizePixel = 0
+status_2.Position = UDim2.new(0.365384638, 0, 0.183333337, 0)
+status_2.Size = UDim2.new(0, 92, 0, 21)
+status_2.Font = Enum.Font.SourceSans
+status_2.Text = "Spinware Launcher"
+status_2.TextColor3 = Color3.new(0.345098, 0.4, 0.466667)
+status_2.TextSize = 14
+
+TextLabel_3.Parent = status_2
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.Position = UDim2.new(0, 0, 1, 0)
+TextLabel_3.Size = UDim2.new(0, 92, 0, 16)
+TextLabel_3.Font = Enum.Font.SourceSansSemibold
+TextLabel_3.Text = "Online"
+TextLabel_3.TextColor3 = Color3.new(0.160784, 0.556863, 0.541176)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14
+TextLabel_3.TextWrapped = true
+
+news_frame.Name = "news_frame"
+news_frame.Parent = gui
+news_frame.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+news_frame.BorderSizePixel = 0
+news_frame.Position = UDim2.new(0.044745896, 0, 0.294822961, 0)
+news_frame.Size = UDim2.new(0, 358, 0, 39)
+news_frame.Font = Enum.Font.SourceSans
+news_frame.Text = "     News"
+news_frame.TextColor3 = Color3.new(0.827451, 0.847059, 0.886275)
+news_frame.TextSize = 16
+news_frame.TextWrapped = true
+news_frame.TextXAlignment = Enum.TextXAlignment.Left
+
+blue_bar_extend_2.Name = "blue_bar_extend"
+blue_bar_extend_2.Parent = news_frame
+blue_bar_extend_2.BackgroundColor3 = Color3.new(0.0705882, 0.384314, 0.623529)
+blue_bar_extend_2.BorderSizePixel = 0
+blue_bar_extend_2.Size = UDim2.new(0, 2, 0, 38)
+
+corner_frame_2.Name = "corner_frame"
+corner_frame_2.Parent = news_frame
+corner_frame_2.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+corner_frame_2.Position = UDim2.new(0.929761827, 0, 0, 0)
+corner_frame_2.Size = UDim2.new(0, 32, 0, 39)
+
+gray_lining_2.Name = "gray_lining"
+gray_lining_2.Parent = news_frame
+gray_lining_2.BackgroundColor3 = Color3.new(0.211765, 0.247059, 0.294118)
+gray_lining_2.BorderSizePixel = 0
+gray_lining_2.Position = UDim2.new(0, 0, 0.974358976, 0)
+gray_lining_2.Size = UDim2.new(0, 364, 0, 1)
+
+frame_fix_2.Name = "frame_fix"
+frame_fix_2.Parent = news_frame
+frame_fix_2.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+frame_fix_2.BorderSizePixel = 0
+frame_fix_2.Position = UDim2.new(0.829608917, 0, 0.589743555, 0)
+frame_fix_2.Size = UDim2.new(0, 67, 0, 15)
+
+news_dropdown.Name = "news_dropdown"
+news_dropdown.Parent = news_frame
+news_dropdown.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+news_dropdown.BorderSizePixel = 0
+news_dropdown.Position = UDim2.new(0, 0, 1, 0)
+news_dropdown.Size = UDim2.new(0, 364, 0, 110)
+
+status_corner_fix_2.Name = "status_corner_fix"
+status_corner_fix_2.Parent = news_dropdown
+status_corner_fix_2.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+status_corner_fix_2.Position = UDim2.new(0, 0, 0.937878668, 0)
+status_corner_fix_2.Size = UDim2.new(0, 364, 0, 18)
+
+ScrollingFrame.Parent = news_dropdown
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.00274725282, 0, 0.0181818176, 0)
+ScrollingFrame.Size = UDim2.new(0, 362, 0, 100)
+ScrollingFrame.ScrollBarThickness = 6
+
+_2nd_line.Name = "2nd_line"
+_2nd_line.Parent = ScrollingFrame
+_2nd_line.BackgroundColor3 = Color3.new(1, 1, 1)
+_2nd_line.BackgroundTransparency = 1
+_2nd_line.BorderSizePixel = 0
+_2nd_line.Position = UDim2.new(0.0276243091, 0, 0.126996592, 0)
+_2nd_line.Size = UDim2.new(0, 341, 0, 14)
+_2nd_line.Font = Enum.Font.SourceSans
+_2nd_line.Text = "Welcome To Spinware Launcher! BetaV0.2"
+_2nd_line.TextColor3 = Color3.new(0.827451, 0.847059, 0.886275)
+_2nd_line.TextSize = 14
+_2nd_line.TextXAlignment = Enum.TextXAlignment.Left
+_2nd_line.TextYAlignment = Enum.TextYAlignment.Top
+
+first_line.Name = "first_line"
+first_line.Parent = ScrollingFrame
+first_line.BackgroundColor3 = Color3.new(1, 1, 1)
+first_line.BackgroundTransparency = 1
+first_line.BorderSizePixel = 0
+first_line.Position = UDim2.new(0.0276243091, 0, 0.0444009341, 0)
+first_line.Size = UDim2.new(0, 342, 0, 18)
+first_line.Font = Enum.Font.SourceSans
+first_line.Text = "Discord: https://discord.gg/yBGAz5KEYg "
+first_line.TextColor3 = Color3.new(0.827451, 0.847059, 0.886275)
+first_line.TextSize = 14
+first_line.TextXAlignment = Enum.TextXAlignment.Left
+first_line.TextYAlignment = Enum.TextYAlignment.Top
+
+_3rd_line.Name = "3rd_line"
+_3rd_line.Parent = ScrollingFrame
+_3rd_line.BackgroundColor3 = Color3.new(1, 1, 1)
+_3rd_line.BackgroundTransparency = 1
+_3rd_line.BorderSizePixel = 0
+_3rd_line.Position = UDim2.new(0.0276243091, 0, 0.245178431, 0)
+_3rd_line.Size = UDim2.new(0, 341, 0, 14)
+_3rd_line.Font = Enum.Font.SourceSans
+_3rd_line.Text = "Our ScriptHub is currently in beta, Therefore if you find any Glitches"
+_3rd_line.TextColor3 = Color3.new(0.827451, 0.847059, 0.886275)
+_3rd_line.TextSize = 14
+_3rd_line.TextXAlignment = Enum.TextXAlignment.Left
+_3rd_line.TextYAlignment = Enum.TextYAlignment.Top
+
+_2nd_line_2.Name = "2nd_line"
+_2nd_line_2.Parent = ScrollingFrame
+_2nd_line_2.BackgroundColor3 = Color3.new(1, 1, 1)
+_2nd_line_2.BackgroundTransparency = 1
+_2nd_line_2.BorderSizePixel = 0
+_2nd_line_2.Position = UDim2.new(0.0303867422, 0, 0.308814824, 0)
+_2nd_line_2.Size = UDim2.new(0, 341, 0, 14)
+_2nd_line_2.Font = Enum.Font.SourceSans
+_2nd_line_2.Text = "And Or Mistakes Please let us know in our discord above!"
+_2nd_line_2.TextColor3 = Color3.new(0.827451, 0.847059, 0.886275)
+_2nd_line_2.TextSize = 14
+_2nd_line_2.TextXAlignment = Enum.TextXAlignment.Left
+_2nd_line_2.TextYAlignment = Enum.TextYAlignment.Top
+
+laucher_frame.Name = "laucher_frame"
+laucher_frame.Parent = gui
+laucher_frame.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+laucher_frame.BorderSizePixel = 0
+laucher_frame.Position = UDim2.new(0.0447459221, 0, 0.671233237, 0)
+laucher_frame.Size = UDim2.new(0, 358, 0, 39)
+laucher_frame.Font = Enum.Font.SourceSans
+laucher_frame.Text = "     Launcher / Other"
+laucher_frame.TextColor3 = Color3.new(0.827451, 0.847059, 0.886275)
+laucher_frame.TextSize = 16
+laucher_frame.TextWrapped = true
+laucher_frame.TextXAlignment = Enum.TextXAlignment.Left
+
+blue_bar_extend_3.Name = "blue_bar_extend"
+blue_bar_extend_3.Parent = laucher_frame
+blue_bar_extend_3.BackgroundColor3 = Color3.new(0.0705882, 0.384314, 0.623529)
+blue_bar_extend_3.BorderSizePixel = 0
+blue_bar_extend_3.Size = UDim2.new(0, 2, 0, 38)
+
+corner_frame_3.Name = "corner_frame"
+corner_frame_3.Parent = laucher_frame
+corner_frame_3.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+corner_frame_3.Position = UDim2.new(0.929761827, 0, 0, 0)
+corner_frame_3.Size = UDim2.new(0, 32, 0, 39)
+
+gray_lining_3.Name = "gray_lining"
+gray_lining_3.Parent = laucher_frame
+gray_lining_3.BackgroundColor3 = Color3.new(0.211765, 0.247059, 0.294118)
+gray_lining_3.BorderSizePixel = 0
+gray_lining_3.Position = UDim2.new(0, 0, 0.974358976, 0)
+gray_lining_3.Size = UDim2.new(0, 364, 0, 1)
+
+frame_fix_3.Name = "frame_fix"
+frame_fix_3.Parent = laucher_frame
+frame_fix_3.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+frame_fix_3.BorderSizePixel = 0
+frame_fix_3.Position = UDim2.new(0.829608917, 0, 0.589743555, 0)
+frame_fix_3.Size = UDim2.new(0, 67, 0, 15)
+
+frame_other.Name = "frame_other"
+frame_other.Parent = laucher_frame
+frame_other.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+frame_other.BorderSizePixel = 0
+frame_other.Position = UDim2.new(0, 0, 1, 0)
+frame_other.Size = UDim2.new(0, 364, 0, 83)
+
+status_corner_fix_3.Name = "status_corner_fix"
+status_corner_fix_3.Parent = frame_other
+status_corner_fix_3.BackgroundColor3 = Color3.new(0.137255, 0.184314, 0.243137)
+status_corner_fix_3.Position = UDim2.new(0, 0, 0.92148602, 0)
+status_corner_fix_3.Size = UDim2.new(0, 364, 0, 13)
+
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.Name = "BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg"
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.Parent = laucher_frame
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.BackgroundColor3 = Color3.new(0.160784, 0.329412, 0.698039)
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.Position = UDim2.new(0.0307262558, 0, 2.20512819, 0)
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.Size = UDim2.new(0, 342, 0, 29)
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.Font = Enum.Font.SourceSans
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.Text = "Launch"
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.TextColor3 = Color3.new(0.827451, 0.847059, 0.886275)
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.TextSize = 18
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.TextWrapped = true
+
+pass.Name = "pass"
+pass.Parent = laucher_frame
+pass.BackgroundColor3 = Color3.new(0.156863, 0.203922, 0.262745)
+pass.BorderSizePixel = 0
+pass.Position = UDim2.new(0.0307262577, 0, 1.25641024, 0)
+pass.Size = UDim2.new(0, 342, 0, 29)
+pass.Font = Enum.Font.SourceSans
+pass.PlaceholderColor3 = Color3.new(1, 1, 1)
+pass.Text = ""
+pass.TextColor3 = Color3.new(0.827451, 0.847059, 0.886275)
+pass.TextSize = 14
+
+BDUSEBD793busdbd324h7dsb784sbdy3b0U328y87dhusicbh04DFJD2HBUb7febwfe86GB3479Ggv79eg.MouseButton1Click:Connect(function()
+	if pass.Text == "syn9999"  
+		or pass.Text == "dumoGLV3ltQYc9dW5ANGpC8APv0bLZzEUTFKGiiQpN4u8WYVJk"
+		or pass.Text == "VBlQaZ4IbY0NGpyxpcHea5f3DgAFuE8MkwDluUooD0Wx7bf7So"
+		or pass.Text == "p5iowiJU3CpxAVjYOkLVNsjKKlm15fBCR4Rcif5mXPZjIpLb7Z"
+		or pass.Text == "6L1usW5HneD4WsZluVjAwWcTBt40YqBFqYsIqLVmUeF0YIa4wb"
+		or pass.Text == "iXYYoNIodICp34Bi1lF68vAohk3ZlinjWrc5Vzv79rgsyBxiEu"
+		or pass.Text == "j3G9zmLexs6HQGlt52ZsJqEfQRRR2hVFU594f8F7TXyXWNjlTl"
+		or pass.Text == "M6Ap3P7HsA17ShDzqArRgYJJCBA9wuKvxeYmeQinB5HWbwRRgr"
+		or pass.Text == "FT3ImN5P06N1eG2oYIxftUzxZ0AwQ5XTO4M0vt0XOdPiQWyWTj" then
+		gui.Visible = false
+		print("Succesful Sign In! Loading Spinware")
+		wait(0.5)
+		print("26%")
+		wait(0.2)
+		print("40%")
+		wait(0.4)
+		print("89%")
+		print("100%")
+		wait(1.0)
+		print("Spinware Loaded!")
+		print("Report any bugs in our discord! https://discord.gg/yBGAz5KEYg.")
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/syn-dump/Klar.gg-Remake2/main/loader_source.txt"))();
+	else
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Login Failed.";
+			Text = "Possibilitys: Incorrect Key, Sharing Keys, Misspelled Key.";
+			Icon= ""
+			
+		})
+	end
+end)
